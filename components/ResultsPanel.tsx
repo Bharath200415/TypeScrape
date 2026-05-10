@@ -15,10 +15,10 @@ interface ResultsPanelProps {
 }
 
 const TABS = [
-  { id: "scraped", label: "Scraped Tokens" },
-  { id: "analysis", label: "AI Analysis" },
+  { id: "scraped", label: "Design System" },
+  { id: "analysis", label: "Design Analytics" },
   { id: "tailwind", label: "Tailwind Theme" },
-  { id: "starter", label: "Starter Pack" },
+  { id: "starter", label: "Starter Kit" },
   { id: "skill", label: "AI Skill" },
 ] as const
 
