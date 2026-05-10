@@ -38,7 +38,8 @@ export default function ResultsPanel({ tokens, analysis, url }: ResultsPanelProp
       {/* header */}
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-1">
-          <h2 className="text-lg font-semibold text-zinc-950">
+          <h2 className="text-2xl font-semibold text-zinc-950"
+          style={{ fontFamily: "var(--font-custom-heading)"}}>
             Design system extracted
           </h2>
           <span className="text-xs font-mono text-zinc-500">{domain}</span>

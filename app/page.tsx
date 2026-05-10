@@ -144,8 +144,9 @@ export default function Home() {
         <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur-md">
           <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
             <span
-              className="font-mono text-lg  font-extrabold tracking-tight cursor-pointer"
+              className="text-2xl  font-bold  tracking-tight cursor-pointer"
               onClick={handleReset}
+              style={{ fontFamily: "var(--font-custom-heading)"}}
             >
               TypeScrape
             </span>
@@ -252,7 +253,7 @@ export default function Home() {
             <div className="flex justify-end">
               <button
                 onClick={handleReset}
-                className="text-xs font-mono px-4 py-2 rounded-lg bg-white hover:bg-zinc-100 border border-zinc-200 text-zinc-600 hover:text-zinc-950 transition-all"
+                className="text-xs cursor-pointer font-mono px-4 py-2 rounded-lg bg-neutral-100 shadow shadow-neutral-400  hover:bg-zinc-100 border border-zinc-200 text-zinc-600 font-semibold hover:text-zinc-950 transition-all"
               >
                 Analyze another
               </button>

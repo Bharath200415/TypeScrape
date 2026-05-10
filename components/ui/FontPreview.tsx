@@ -48,6 +48,46 @@ export default function FontPreview({ font }: FontPreviewProps) {
       >
         The quick brown fox jumps over the lazy dog
       </span>
+      {isAsset && (
+        <div className="mt-3">
+          <button
+            onClick={async () => {
+              try {
+                const res = await fetch(proxiedUrl)
+                if (!res.ok) throw new Error(`Download failed: ${res.status}`)
+                const blob = await res.blob()
+                const urlObj = URL.createObjectURL(blob)
+                let filename = font.name || "font"
+                try {
+                  const parsed = new URL(font.url)
+                  const parts = parsed.pathname.split("/")
+                  const last = parts[parts.length - 1]
+                  if (last) filename = last.split("?")[0]
+                } catch {
+                  // ignore
+                }
+
+                const a = document.createElement("a")
+                a.href = urlObj
+                a.download = filename
+                document.body.appendChild(a)
+                a.click()
+                a.remove()
+                URL.revokeObjectURL(urlObj)
+              } catch (err) {
+                console.error("Font download error:", err)
+                alert("Failed to download font")
+              }
+            }}
+            className="mt-2 w-full inline-flex items-center justify-center gap-2 px-4 py-2 bg-zinc-900 text-white rounded-md hover:bg-zinc-800 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor">
+              <path strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0l4-4m-4 4l-4-4M21 21H3" />
+            </svg>
+            Download
+          </button>
+        </div>
+      )}
     </div>
   )
 }
