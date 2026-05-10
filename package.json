@@ -12,6 +12,7 @@
     "@google/generative-ai": "^0.24.1",
     "dotenv": "^17.4.2",
     "motion": "^12.38.0",
+    "mx-icons": "^1.0.31",
     "next": "16.2.6",
     "playwright": "^1.59.1",
     "react": "19.2.4",
