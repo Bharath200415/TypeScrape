@@ -43,9 +43,6 @@ export default function ResultsPanel({ tokens, analysis, url }: ResultsPanelProp
           </h2>
           <span className="text-xs font-mono text-zinc-500">{domain}</span>
         </div>
-        <span className="text-xs font-mono px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700">
-          ✓ complete
-        </span>
       </div>
 
       {/* tab bar */}
