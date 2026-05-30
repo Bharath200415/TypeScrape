@@ -36,6 +36,9 @@ const customHeading = localFont({
 export const metadata: Metadata = {
   title: "TypeScrape - Design Intelligence",
   description: "Extract design systems from any website using Anakin AI + Gemini",
+  other: {
+    "armorscan-verification": "_i9-WofF_pGFbcecywOHIFv0QDQBMKCO",
+  },
 }
 
 export default function RootLayout({
